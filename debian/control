@@ -1,0 +1,22 @@
+Source: cubicweb-drh
+Section: web
+Priority: optional
+Maintainer: Logilab Packaging Team <contact@logilab.fr>
+Uploaders: Sylvain Thenault <sylvain.thenault@logilab.fr> 
+Build-Depends: debhelper (>= 5.0.37.1), python (>=2.4), python-dev (>=2.4)
+Standards-Version: 3.8.0
+
+Package: cubicweb-drh
+Architecture: all
+Conflicts: cubicweb-drh-appl-server, cubicweb-drh-appl, cubicweb-drh-appl-client, cubicweb-drh-appl
+Replaces: cubicweb-drh-appl-server, cubicweb-drh-appl, cubicweb-drh-appl-client, cubicweb-drh-appl
+Depends: cubicweb-common (>= 2.99.0), 
+  cubicweb-file, cubicweb-email, cubicweb-person, cubicweb-addressbook, cubicweb-tag, 
+  cubicweb-folder, cubicweb-comment, cubicweb-basket, cubicweb-task, cubicweb-event
+Description: CubicWeb application cube for Human resource management
+ CubicWeb is a entities / relations based knowledge management system
+ developped at Logilab.
+ .
+ This package provides the "Drh" application built on top of CubicWeb.
+ It manages users, documents, tasks, comments, states
+

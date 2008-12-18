@@ -1,0 +1,101 @@
+# erudi-drh i18n catalog
+# Copyright 2003-2008 LOGILAB S.A. (Paris, FRANCE), all rights reserved.
+# Logilab <contact@logilab.fr>
+msgid ""
+msgstr ""
+"Project-Id-Version: erudi-drh 0.1.0\n"
+"PO-Revision-Date: 2008-02-15 11:18+0100\n"
+"Last-Translator: Logilab Team <contact@logilab.fr>\n"
+"Language-Team: fr <contact@logilab.fr>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "New School"
+msgstr "Nouvelle école"
+
+# updated on 2006-09-08 11:47:44
+#
+# singular and plural forms for each entity type
+msgid "School"
+msgstr "École"
+
+msgid "School_plural"
+msgstr "Écoles"
+
+msgid "This School"
+msgstr "Cette école"
+
+msgid "add Person concerned_by File subject"
+msgstr "attacher un fichier"
+
+msgid "add School phone PhoneNumber subject"
+msgstr "numéro de téléphone"
+
+msgid "add School use_email EmailAddress subject"
+msgstr "adresse email"
+
+msgid "add Task todo_by Person object"
+msgstr "ajouter une tâche à faire"
+
+msgid "add a School"
+msgstr "ajouter une école"
+
+msgid "an (high) school"
+msgstr "une école"
+
+msgid "birthday"
+msgstr "anniversaire"
+
+# updated on 2006-07-25 17:34:47
+#
+# singular and plural forms for each entity type
+# subject and object forms for each relation type
+# (no object form for final relation types)
+msgid "concerned_by"
+msgstr "concerné par"
+
+msgid "concerned_by_object"
+msgstr "concerne"
+
+msgid "creating EmailAddress (School %(linkto)s use_email EmailAddress)"
+msgstr "création d'une adresse email pour l'école %(linkto)s"
+
+msgid "creating File (Person %(linkto)s concerned_by File)"
+msgstr "création d'un fichier à rattacher à %(linkto)s"
+
+msgid "creating PhoneNumber (School %(linkto)s phone PhoneNumber)"
+msgstr "création d'un numéro de téléphone pour l'école %(linkto)s"
+
+msgid "creating Task (Task todo_by Person %(linkto)s)"
+msgstr "création d'une tâche à faire par %(linkto)s"
+
+msgid "has_studied_in"
+msgstr "a étudié à"
+
+msgid "has_studied_in_object"
+msgstr "école de"
+
+msgid "interested_in"
+msgstr "intéressé par"
+
+msgid "interested_in_object"
+msgstr "intéresse"
+
+msgid "remove this School"
+msgstr "supprimer cette école"
+
+msgid "used to indicate an estabishment where a person has been studying"
+msgstr "utilisé pour indiquer l'école où la personne a étudié"
+
+#~ msgid "add School phone Phonenumber subject"
+#~ msgstr "ajouter un n° de téléphone"
+
+#~ msgid "add School use_email Emailaddress subject"
+#~ msgstr "ajouter une adresse email"
+
+#~ msgid "creating Emailaddress (School %(linkto)s use_email Emailaddress)"
+#~ msgstr "ajout d'une adresse électronique pour %(linkto)s"
+
+#~ msgid "creating Phonenumber (School %(linkto)s phone Phonenumber)"
+#~ msgstr "création d'un numéro de téléphone pour %(linkto)s"
