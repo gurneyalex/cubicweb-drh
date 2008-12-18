@@ -35,6 +35,8 @@ try:
         [join(TEMPLATES_DIR, 'drh'),
          [fname for fname in listdir('.')
           if fname.endswith('.py') and fname != 'setup.py']],
+        [join(TEMPLATES_DIR, 'drh', 'views'),
+         [join('i18n', fname) for fname in listdir('views')]],
         [join(TEMPLATES_DIR, 'drh', 'i18n'),
          [join('i18n', fname) for fname in listdir('i18n')]],
         [join(TEMPLATES_DIR, 'drh', 'migration'),

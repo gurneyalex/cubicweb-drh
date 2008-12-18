@@ -1,3 +1,4 @@
 include *.py
 recursive-include i18n *.po
+recursive-include views.py 
 recursive-include migration *.py 

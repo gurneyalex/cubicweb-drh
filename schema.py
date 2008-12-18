@@ -4,6 +4,7 @@ Person.add_relation(String(maxsize=512), name='address')
 Person.add_relation(Date(), name='birthday')
 
 Person.add_relation(ObjectRelation('Comment', cardinality='1*', composite='object'), name='comments')
+Person.add_relation(ObjectRelation('Tag'), name='tags')
 Person.add_relation(SubjectRelation('File'), name='concerned_by')
 Person.add_relation(SubjectRelation('State', cardinality='1*'), name='in_state')
 
