@@ -13,10 +13,8 @@ Replaces: cubicweb-drh-appl-server, cubicweb-drh-appl, cubicweb-drh-appl-client,
 Depends: cubicweb-common (>= 2.99.0), 
   cubicweb-file, cubicweb-email, cubicweb-person, cubicweb-addressbook, cubicweb-tag, 
   cubicweb-folder, cubicweb-comment, cubicweb-basket, cubicweb-task, cubicweb-event
-Description: CubicWeb application cube for Human resource management
- CubicWeb is a entities / relations based knowledge management system
- developed at Logilab.
- .
+Description: CubicWeb component (cube) for Human resource management
+ CubicWeb is a semantic web application framework.
  This package provides the "Drh" application built on top of CubicWeb.
  It manages users, documents, tasks, comments, states
 
