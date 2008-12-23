@@ -1,6 +1,6 @@
 from cubicweb.entities import AnyEntity, fetch_config
-from eperson.entities import Person as BasePerson
-from eclassfolders.entities import Folder as BaseFolder
+from cubes.person.entities import Person as BasePerson
+from cubes.folder.entities import Folder as BaseFolder
 
 class Person(BasePerson):
     id = 'Person'
