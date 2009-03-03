@@ -20,8 +20,8 @@ class IndexView(startup.ManageView):
                       len(rset), title))
 
         # candidatures en attente
-        rset = self.req.execute('Any CD,P,CONCAT_STRINGS(TN),E,B '
-                                'GROUPBY P,E,B,CD ORDERBY CD '
+        rset = self.req.execute('Any CD,P,TN,E,B '
+                                'GROUPBY TN,P,E,B,CD ORDERBY CD '
                                 'WHERE P in_state X, P is Person, '
                                 'X name "jugement candidature", '
                                 'T? tags P, T name TN, P has_studied_in E?, '
