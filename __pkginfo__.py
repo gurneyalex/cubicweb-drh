@@ -4,7 +4,7 @@
 distname = "cubicweb-drh"
 modname = distname.split('-', 1)[1]
 
-numversion = (0, 11, 2)
+numversion = (0, 12, 2)
 version = '.'.join(str(num) for num in numversion)
 
 license = 'LCL'
@@ -14,7 +14,7 @@ http://www.logilab.fr/ -- mailto:contact@logilab.fr'''
 author = "Logilab"
 author_email = "contact@logilab.fr"
 
-short_desc = "CubicWeb application tempalte for Human resource management"
+short_desc = "cubicWeb application tempalte for Human resource management"
 long_desc = """CubicWeb is a entities / relations bases knowledge management system
 developped at Logilab.
 .
