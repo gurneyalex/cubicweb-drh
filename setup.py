@@ -48,6 +48,3 @@ def install(**kwargs):
             
 if __name__ == '__main__' :
     install()
-            
-if __name__ == '__main__' :
-    install()
