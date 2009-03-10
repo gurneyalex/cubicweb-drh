@@ -4,11 +4,11 @@
 distname = "cubicweb-drh"
 modname = distname.split('-', 1)[1]
 
-numversion = (0, 12, 2)
+numversion = (0, 12, 3)
 version = '.'.join(str(num) for num in numversion)
 
-license = 'LCL'
-copyright = '''Copyright (c) 2003-2008 LOGILAB S.A. (Paris, FRANCE).
+license = 'LGPL'
+copyright = '''Copyright (c) 2003-2009 LOGILAB S.A. (Paris, FRANCE).
 http://www.logilab.fr/ -- mailto:contact@logilab.fr'''
 
 author = "Logilab"
