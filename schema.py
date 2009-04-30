@@ -35,7 +35,7 @@ class has_studied_in(RelationType):
 
 
 class interested_in(RelationDefinition):
-    subject = ('Person', 'EUser')
+    subject = ('Person', 'CWUser')
     object = 'Event'
 
 
