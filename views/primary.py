@@ -5,7 +5,9 @@ from cubicweb.web.component import RelatedObjectsVComponent
 class SentMailVComponent(RelatedObjectsVComponent):
     """email sent by this person"""
     id = 'sentmail'
-    __select__ = implements('Person') & rql_condition('X use_email EA, E sender EA')
+    __select__ = RelatedObjectsVComponent.__select__ & implements('Person') & rql_condition('X use_email EA, E sender EA')
+    rtype = 'use_email'
+    role = 'subject'
     order = 40
     # reuse generated message id
     title = _('contentnavigation_sentmail')
