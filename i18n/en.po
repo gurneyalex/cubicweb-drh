@@ -42,10 +42,10 @@ msgid "add a School"
 msgstr "add a school"
 
 msgid "an (high) school"
-msgstr ""
+msgstr "an (high) school"
 
 msgid "birthday"
-msgstr ""
+msgstr "birthday"
 
 # updated on 2006-07-25 17:34:47
 #
@@ -86,4 +86,4 @@ msgid "remove this School"
 msgstr "remove this school"
 
 msgid "used to indicate an estabishment where a person has been studying"
-msgstr ""
+msgstr "used to indicate an estabishment where a person has been studying"
