@@ -1,6 +1,9 @@
-
 from cubicweb.selectors import implements, rql_condition
 from cubicweb.web.component import RelatedObjectsVComponent
+from cubicweb.web import uicfg
+
+uicfg.autoform_is_inlined.tag_subject_of(('School', 'use_email', '*'), True)
+uicfg.autoform_is_inlined.tag_subject_of(('School', 'phone', '*'), True)
 
 class SentMailVComponent(RelatedObjectsVComponent):
     """email sent by this person"""
