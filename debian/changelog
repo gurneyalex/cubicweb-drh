@@ -1,3 +1,9 @@
+cubicweb-drh (0.13.0-1) unstable; urgency=low
+
+  * update for CW 3.2
+
+ -- Sylvain Thénault <Sylvain.Thenault@logilab.fr>  Fri, 15 May 2009 8:14:51 +0100
+
 cubicweb-drh (0.12.3-1) unstable; urgency=low
 
   * new upstream release (fix MANIFEST.in)
@@ -55,7 +61,7 @@ cubicweb-drh (0.8.0-1) DISTRIBUTION; urgency=low
 
 cubicweb-drh (0.7.0-1) DISTRIBUTION; urgency=low
 
-  * new upstream release
+   new upstream release
 
  -- Sylvain Thénault <sylvain.thenault@logilab.fr>  Mon, 21 May 2007 14:42:58 +0200
 
