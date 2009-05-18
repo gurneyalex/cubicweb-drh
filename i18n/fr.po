@@ -89,7 +89,7 @@ msgid "contentnavigation_sentmail"
 msgstr "mail"
 
 msgid "contentnavigation_sentmail_description"
-msgstr "envoyer mail"
+msgstr "emails envoyés"
 
 msgid "creating EmailAddress (School %(linkto)s use_email EmailAddress)"
 msgstr "création d'une adresse email pour l'école %(linkto)s"
