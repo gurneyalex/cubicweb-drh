@@ -86,7 +86,7 @@ msgid "concerned_by_object"
 msgstr "concerns"
 
 msgid "contentnavigation_sentmail"
-msgstr "contentnavigation_sentmail"
+msgstr "email"
 
 msgid "contentnavigation_sentmail_description"
 msgstr "sent mail"
