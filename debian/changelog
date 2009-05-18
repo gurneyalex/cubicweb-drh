@@ -61,7 +61,7 @@ cubicweb-drh (0.8.0-1) DISTRIBUTION; urgency=low
 
 cubicweb-drh (0.7.0-1) DISTRIBUTION; urgency=low
 
-   new upstream release
+  * new upstream release
 
  -- Sylvain Thénault <sylvain.thenault@logilab.fr>  Mon, 21 May 2007 14:42:58 +0200
 

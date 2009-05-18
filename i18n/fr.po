@@ -36,7 +36,7 @@ msgid "This School"
 msgstr "Cette école"
 
 msgid "accept application"
-msgstr "accepter l'application"
+msgstr "accepter une candidature"
 
 msgid "add Person concerned_by File subject"
 msgstr "attacher un fichier"
@@ -54,7 +54,7 @@ msgid "an (high) school"
 msgstr "une école"
 
 msgid "application"
-msgstr "application"
+msgstr "candidature"
 
 msgid "aucune candidature en attente"
 msgstr "aucune candidature en attente"
@@ -63,13 +63,13 @@ msgid "birthday"
 msgstr "anniversaire"
 
 msgid "boxes_drh_workflow_box"
-msgstr "boîte drh"
+msgstr "boîte personnes / état "
 
 msgid "boxes_drh_workflow_box_description"
-msgstr "boîte description"
+msgstr "affiche des liens pour voir les personnes en fonction de leur état"
 
 msgid "cancel application"
-msgstr "annuler l'application"
+msgstr "annuler une candidature"
 
 msgid "canceled"
 msgstr "annulé"
@@ -89,7 +89,7 @@ msgid "contentnavigation_sentmail"
 msgstr "mail"
 
 msgid "contentnavigation_sentmail_description"
-msgstr "mail description"
+msgstr "envoyer mail"
 
 msgid "creating EmailAddress (School %(linkto)s use_email EmailAddress)"
 msgstr "création d'une adresse email pour l'école %(linkto)s"
@@ -101,7 +101,7 @@ msgid "creating PhoneNumber (School %(linkto)s phone PhoneNumber)"
 msgstr "création d'un numéro de téléphone pour l'école %(linkto)s"
 
 msgid "discard application"
-msgstr "rejeter l'application"
+msgstr "rejeter une candidature"
 
 msgid "has_studied_in"
 msgstr "a étudié à"
@@ -122,10 +122,10 @@ msgid "interview judgment"
 msgstr "jugement de l'entretien"
 
 msgid "interview planned"
-msgstr "entretein planifié"
+msgstr "entretien planifié"
 
 msgid "interview scheduled"
-msgstr "entretein planifié"
+msgstr "entretien planifié"
 
 msgid "interview time negociation"
 msgstr "le temps de l'entretien"
@@ -161,7 +161,7 @@ msgid "send negative answer"
 msgstr "envoyer une réponse négative"
 
 msgid "send positive answer"
-msgstr "envoyer une répose positive"
+msgstr "envoyer une réponse positive"
 
 msgid "used to indicate an estabishment where a person has been studying"
 msgstr "utilisé pour indiquer l'école où la personne a étudié"

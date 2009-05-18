@@ -63,10 +63,10 @@ msgid "birthday"
 msgstr "birthday"
 
 msgid "boxes_drh_workflow_box"
-msgstr "boxes_drh_workflow_box"
+msgstr "box persons/state"
 
 msgid "boxes_drh_workflow_box_description"
-msgstr ""
+msgstr "display links in order to show the person depending their state"
 
 msgid "cancel application"
 msgstr "cancel application"
@@ -89,7 +89,7 @@ msgid "contentnavigation_sentmail"
 msgstr "contentnavigation_sentmail"
 
 msgid "contentnavigation_sentmail_description"
-msgstr "contentnavigation_sentmail_description"
+msgstr "send mail"
 
 msgid "creating EmailAddress (School %(linkto)s use_email EmailAddress)"
 msgstr "creating email address for %(linkto)s"
