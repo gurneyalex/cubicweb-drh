@@ -11,6 +11,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+msgid "Index"
+msgstr ""
+
+msgid "Juger candidatures"
+msgstr ""
+
 msgid "New School"
 msgstr "New school"
 
@@ -23,8 +29,14 @@ msgstr "School"
 msgid "School_plural"
 msgstr "Schools"
 
+msgid "State"
+msgstr "State"
+
 msgid "This School"
 msgstr "This school"
+
+msgid "accept application"
+msgstr "accept application"
 
 msgid "add Person concerned_by File subject"
 msgstr "file"
@@ -35,17 +47,32 @@ msgstr "phone number"
 msgid "add School use_email EmailAddress subject"
 msgstr "email address"
 
-msgid "add Task todo_by Person object"
-msgstr "task"
-
 msgid "add a School"
 msgstr "add a school"
 
 msgid "an (high) school"
 msgstr "an (high) school"
 
+msgid "application"
+msgstr "application"
+
+msgid "aucune candidature en attente"
+msgstr ""
+
 msgid "birthday"
 msgstr "birthday"
+
+msgid "boxes_drh_workflow_box"
+msgstr "boxes_drh_workflow_box"
+
+msgid "boxes_drh_workflow_box_description"
+msgstr ""
+
+msgid "cancel application"
+msgstr "cancel application"
+
+msgid "canceled"
+msgstr "canceled"
 
 # updated on 2006-07-25 17:34:47
 #
@@ -58,6 +85,12 @@ msgstr "concerned by"
 msgid "concerned_by_object"
 msgstr "concerns"
 
+msgid "contentnavigation_sentmail"
+msgstr "contentnavigation_sentmail"
+
+msgid "contentnavigation_sentmail_description"
+msgstr "contentnavigation_sentmail_description"
+
 msgid "creating EmailAddress (School %(linkto)s use_email EmailAddress)"
 msgstr "creating email address for %(linkto)s"
 
@@ -67,8 +100,8 @@ msgstr "creating a file for %(linkto)s"
 msgid "creating PhoneNumber (School %(linkto)s phone PhoneNumber)"
 msgstr "adding a new phone number for %(linkto)s"
 
-msgid "creating Task (Task todo_by Person %(linkto)s)"
-msgstr "adding a new task to %(linkto)s"
+msgid "discard application"
+msgstr "discard application"
 
 msgid "has_studied_in"
 msgstr "has studied in"
@@ -82,8 +115,59 @@ msgstr "interested in"
 msgid "interested_in_object"
 msgstr "is an interest of"
 
+msgid "interview done"
+msgstr "interview done"
+
+msgid "interview judgment"
+msgstr "interview judgment"
+
+msgid "interview planned"
+msgstr "interview planned"
+
+msgid "interview scheduled"
+msgstr "interview scheduled"
+
+msgid "interview time negociation"
+msgstr "interview time negociation"
+
+msgid "negative answer sent"
+msgstr "negative answer sent"
+
+msgid "propose interview"
+msgstr "propose interview"
+
+msgid "propose new interview"
+msgstr "propose new interview"
+
+msgid "propositiion accepted"
+msgstr "propositiion accepted"
+
+msgid "recruited"
+msgstr "recruited"
+
+msgid "refused"
+msgstr "refused"
+
 msgid "remove this School"
 msgstr "remove this school"
 
+msgid "schedule interview"
+msgstr "schedule interview"
+
+msgid "send interview proposition"
+msgstr "send interview proposition"
+
+msgid "send negative answer"
+msgstr "send negative answer"
+
+msgid "send positive answer"
+msgstr "send positive answer"
+
 msgid "used to indicate an estabishment where a person has been studying"
 msgstr "used to indicate an estabishment where a person has been studying"
+
+#~ msgid "add Task todo_by Person object"
+#~ msgstr "task"
+
+#~ msgid "creating Task (Task todo_by Person %(linkto)s)"
+#~ msgstr "adding a new task to %(linkto)s"
