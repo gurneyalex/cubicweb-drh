@@ -25,7 +25,8 @@ It manages users, documents, tasks, comments, states
 from os import listdir
 from os.path import join
 
-web, ftp = '', ''
+ftp = ''
+web = 'http://www.cubicweb.org/project/%s' % distname
 
 pyversions = ['2.4']
 
