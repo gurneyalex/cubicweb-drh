@@ -54,3 +54,9 @@ __use__ = ('file', 'email', 'person', 'addressbook',
            'basket', 'event', 'task')
 
 cube_eid = 9653
+classifiers = [
+           'Environment :: Web Environment',
+           'Framework :: CubicWeb',
+           'Programming Language :: Python',
+           'Programming Language :: JavaScript',
+]
