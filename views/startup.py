@@ -22,7 +22,7 @@ class IndexView(startup.ManageView):
         rset = self.req.execute('Any CD,P,group_concat(TN),E,B '
                                 'GROUPBY P,E,B,CD ORDERBY CD '
                                 'WHERE P in_state X, P is Person, '
-                                'X name "jugement candidature", '
+                                'X name "application", '
                                 'T? tags P, T name TN, P has_studied_in E?, '
                                 'P birthday B?, P creation_date CD')
         if rset:
