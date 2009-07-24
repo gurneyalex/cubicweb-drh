@@ -1,3 +1,6 @@
+#delete after the person's cube migration
+add_relation_definition('Person', 'postal_address', 'PostalAddress')
+
 ##migrate address
 add_entity_type('PostalAddress')
 rset = rql('Any X , Y WHERE X is Person, NOT X address NULL, X address Y ')
@@ -39,8 +42,7 @@ add_entity_type('Application')
 
 for person_eid in rset:
     person_state = rql(u'Any S, P Where P is Person, P eid %(eid)s , P in_state S',  {'eid': person_eid[0]})[0][0]
-    app = rql(u'INSERT Application X : X for_person P WHERE P eid %(eid)s', {'eid': person_eid[0]})
-    app_eid = app.get_entity(0, 0).eid
+    app_eid = rql(u'INSERT Application X : X for_person P WHERE P eid %(eid)s', {'eid': person_eid[0]})[0][0]
     rql(u'SET A in_state S WHERE A is Application, A eid %(AP)s, S eid %(s)s',
         {'eid': person_eid[0], 's': person_state, 'AP': app_eid})
 
@@ -66,6 +68,7 @@ add_transition(_('interview done'), 'Application', (itpl,),  itju)
 add_transition(_('propose new interview'), 'Application', (itju,),  prop)
 add_transition(_('accept application'), 'Application', (itju, ),  spoa)
 add_transition(_('propositiion accepted'), 'Application', (spoa,),  recr)
+
 sync_schema_props_perms('Application')
 
 #delete state for Person
