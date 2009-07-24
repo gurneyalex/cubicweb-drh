@@ -15,19 +15,19 @@ msgstr ""
 #
 # singular and plural forms for each entity type
 msgid "Application"
-msgstr ""
+msgstr "Application"
 
 msgid "Application_plural"
-msgstr ""
+msgstr "Applications"
 
 msgid "Index"
-msgstr ""
+msgstr "Index"
 
 msgid "Juger candidatures"
-msgstr ""
+msgstr "application"
 
 msgid "New Application"
-msgstr ""
+msgstr "New Application"
 
 msgid "New School"
 msgstr "New school"
@@ -45,10 +45,10 @@ msgid "State"
 msgstr "State"
 
 msgid "The url's Person on 123people "
-msgstr ""
+msgstr "Link to the peson's page on 123people site"
 
 msgid "This Application"
-msgstr ""
+msgstr "This Application"
 
 msgid "This School"
 msgstr "This school"
@@ -69,7 +69,7 @@ msgid "add Task todo_by Person object"
 msgstr "task"
 
 msgid "add a Application"
-msgstr ""
+msgstr "add a Application"
 
 msgid "add a School"
 msgstr "add a school"
@@ -81,22 +81,22 @@ msgid "application"
 msgstr "application"
 
 msgid "aucune candidature en attente"
-msgstr ""
+msgstr "no application in hold"
 
 msgid "birthday"
 msgstr "birthday"
 
 msgid "boxes_123people_box"
-msgstr ""
+msgstr "123people box"
 
 msgid "boxes_123people_box_description"
-msgstr ""
+msgstr "box contains the link to the person's page on 123people site"
 
 msgid "boxes_concerned_by_box"
-msgstr ""
+msgstr "concerned by box"
 
 msgid "boxes_concerned_by_box_description"
-msgstr ""
+msgstr "box contains the attachement files "
 
 msgid "boxes_drh_workflow_box"
 msgstr "box persons/state"
@@ -143,13 +143,13 @@ msgid "discard application"
 msgstr "discard application"
 
 msgid "download icon"
-msgstr ""
+msgstr "download icon"
 
 msgid "for_person"
-msgstr ""
+msgstr "for person"
 
 msgid "for_person_object"
-msgstr ""
+msgstr "person applied"
 
 msgid "has_studied_in"
 msgstr "has studied in"
@@ -197,7 +197,7 @@ msgid "refused"
 msgstr "refused"
 
 msgid "remove this Application"
-msgstr ""
+msgstr "remove this Application"
 
 msgid "remove this School"
 msgstr "remove this school"
