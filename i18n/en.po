@@ -11,10 +11,22 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+# schema pot file, generated on 2009-07-24 10:45:06
+#
+# singular and plural forms for each entity type
+msgid "Application"
+msgstr ""
+
+msgid "Application_plural"
+msgstr ""
+
 msgid "Index"
 msgstr ""
 
 msgid "Juger candidatures"
+msgstr ""
+
+msgid "New Application"
 msgstr ""
 
 msgid "New School"
@@ -32,6 +44,12 @@ msgstr "Schools"
 msgid "State"
 msgstr "State"
 
+msgid "The url's Person on 123people "
+msgstr ""
+
+msgid "This Application"
+msgstr ""
+
 msgid "This School"
 msgstr "This school"
 
@@ -47,6 +65,12 @@ msgstr "phone number"
 msgid "add School use_email EmailAddress subject"
 msgstr "email address"
 
+msgid "add Task todo_by Person object"
+msgstr "task"
+
+msgid "add a Application"
+msgstr ""
+
 msgid "add a School"
 msgstr "add a school"
 
@@ -61,6 +85,18 @@ msgstr ""
 
 msgid "birthday"
 msgstr "birthday"
+
+msgid "boxes_123people_box"
+msgstr ""
+
+msgid "boxes_123people_box_description"
+msgstr ""
+
+msgid "boxes_concerned_by_box"
+msgstr ""
+
+msgid "boxes_concerned_by_box_description"
+msgstr ""
 
 msgid "boxes_drh_workflow_box"
 msgstr "box persons/state"
@@ -100,8 +136,20 @@ msgstr "creating a file for %(linkto)s"
 msgid "creating PhoneNumber (School %(linkto)s phone PhoneNumber)"
 msgstr "adding a new phone number for %(linkto)s"
 
+msgid "creating Task (Task todo_by Person %(linkto)s)"
+msgstr "adding a new task to %(linkto)s"
+
 msgid "discard application"
 msgstr "discard application"
+
+msgid "download icon"
+msgstr ""
+
+msgid "for_person"
+msgstr ""
+
+msgid "for_person_object"
+msgstr ""
 
 msgid "has_studied_in"
 msgstr "has studied in"
@@ -148,6 +196,9 @@ msgstr "recruited"
 msgid "refused"
 msgstr "refused"
 
+msgid "remove this Application"
+msgstr ""
+
 msgid "remove this School"
 msgstr "remove this school"
 
@@ -165,9 +216,3 @@ msgstr "send positive answer"
 
 msgid "used to indicate an estabishment where a person has been studying"
 msgstr "used to indicate an estabishment where a person has been studying"
-
-#~ msgid "add Task todo_by Person object"
-#~ msgstr "task"
-
-#~ msgid "creating Task (Task todo_by Person %(linkto)s)"
-#~ msgstr "adding a new task to %(linkto)s"

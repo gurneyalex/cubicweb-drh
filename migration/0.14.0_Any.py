@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 #delete after the person's cube migration
 add_relation_definition('Person', 'postal_address', 'PostalAddress')
 
@@ -26,12 +28,12 @@ drop_attribute('Person', 'address')
 ##state label was changed
 rset = rql('Any P WHERE P is Person')
 
-state_changed ={u'jugement candidature': u'application',  u'envoi réponse négative': u'send negative answer',
+state_changed ={u'jugement candidature': u'application',  u'envoi rÃ©ponse nÃ©gative': u'send negative answer',
                 u'envoi proposition entretien': u'send interview proposition',
-                u'négociation horaire entretien': u'interview time negociation',
+                u'nÃ©gociation horaire entretien': u'interview time negociation',
                 u'jugement entretien': u'interview judgment',  u'entretien convenu': u'send interview proposition',
-                u'envoi réponse positive': u'send positive answer',
-                u'refusé': u'refused', u'recruté': u'recruited', u'annulé': u'canceled'}
+                u'envoi rÃ©ponse positive': u'send positive answer',
+                u'refusÃ©': u'refused', u'recrutÃ©': u'recruited', u'annulÃ©': u'canceled'}
 
 for old_state, new_state in state_changed.items():
     rql(u'SET S name %(NS)s WHERE S state_of P , P name "Person", S name %(OS)s',
