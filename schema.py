@@ -1,23 +1,33 @@
-Person = import_erschema('Person')
+from yams.buildobjs import (EntityType, RelationType, RelationDefinition,
+                            SubjectRelation, ObjectRelation,
+                            String, Date)
+
+try:
+    from cubes.person.schema import Person
+    from cubes.task.schema import Task
+    from cubes.event.schema import Event
+except (ImportError, NameError):
+    # old-style yams schema will raise NameError on EntityType, RelationType, etc.
+    Person = import_erschema('Person')
+    Task = import_erschema('Task')
+    Event = import_erschema('Event')
+
 Person.add_relation(Date(), name='birthday')
 Person.add_relation(ObjectRelation('Comment', cardinality='1*', composite='object'), name='comments')
 Person.add_relation(ObjectRelation('Tag'), name='tags')
 Person.add_relation(SubjectRelation('File'), name='concerned_by')
 
 
-Task = import_erschema('Task')
 Task.add_relation(ObjectRelation('Comment', cardinality='1*', composite='object'), name='comments')
 Task.add_relation(SubjectRelation('Person'), name='todo_by')
 
-Event = import_erschema('Event')
 Event.add_relation(ObjectRelation('Comment', cardinality='1*', composite='object'), name='comments')
 
 
 class School(EntityType):
     """an (high) school"""
-    name   = String(required=True, fulltextindexed=True,
-                    constraints=[SizeConstraint(128)])
-    address   = String(constraints=[SizeConstraint(512)])
+    name   = String(required=True, fulltextindexed=True, maxsize=128)
+    address   = String(maxsize=512)
     description = String(fulltextindexed=True)
 
     phone         = SubjectRelation('PhoneNumber', composite='subject')
