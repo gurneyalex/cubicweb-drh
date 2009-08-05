@@ -38,7 +38,7 @@ class StartupViewsBox(BoxTemplate):
                                      vtitle=self.req._(state))
                 label = u'%s: %s' % (state, count)
                 box.append(BoxLink(url, label))
-        
+
         if not box.is_empty():
             box.render(self.w)
 
@@ -52,7 +52,7 @@ class AttachmentsDownloadBox(EntityBoxTemplate):
     rtype = 'concerned_by'
     target = 'subject'
     order = 0
-    
+
     def cell_call(self, row, col, **kwargs):
         entity = self.entity(row, col)
         req = self.req
@@ -68,7 +68,7 @@ class AttachmentsDownloadBox(EntityBoxTemplate):
                       _('download icon'), html_escape(attachment.dc_title())))
             self.w(u'</div>')
         self.w(u'</div>\n</div>\n</div>\n')
-        
+
 
 class PeopleBox(EntityBoxTemplate):
     id = '123people_box'
