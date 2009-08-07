@@ -4,7 +4,7 @@
 distname = "cubicweb-drh"
 modname = distname.split('-', 1)[1]
 
-numversion = (0, 13, 0)
+numversion = (0, 14, 0)
 version = '.'.join(str(num) for num in numversion)
 
 license = 'LGPL'
