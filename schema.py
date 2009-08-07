@@ -1,6 +1,7 @@
 from yams.buildobjs import (EntityType, RelationType, RelationDefinition,
                             SubjectRelation, ObjectRelation,
-                            String, Date)
+                            String, Date, Datetime)
+from cubicweb.schema import WorkflowableEntityType
 
 try:
     from cubes.person.schema import Person
