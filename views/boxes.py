@@ -3,7 +3,7 @@
 from cubicweb.web.box import BoxTemplate
 from cubicweb.web.htmlwidgets import BoxWidget, BoxLink
 
-from logilab.mtconverter import xtml_escape
+from logilab.mtconverter import xml_escape
 from cubicweb.web.box import EntityBoxTemplate
 
 from cubicweb.selectors import implements, rql_condition
