@@ -3,7 +3,7 @@
 from cubicweb.web.box import BoxTemplate
 from cubicweb.web.htmlwidgets import BoxWidget, BoxLink
 
-from logilab.mtconverter import html_escape
+from logilab.mtconverter import xtml_escape
 from cubicweb.web.box import EntityBoxTemplate
 
 from cubicweb.selectors import implements, rql_condition
@@ -52,13 +52,13 @@ class AttachmentsDownloadBox(EntityBoxTemplate):
         self.w(u'<div class="sideBox">')
         title = req._('concerned_by')
         self.w(u'<div class="sideBoxTitle downloadBoxTitle"><span>%s</span></div>'
-            % html_escape(title))
+            % xml_escape(title))
         self.w(u'<div class="sideBox downloadBox"><div class="sideBoxBody">')
         for attachment in entity.concerned_by:
             self.w(u'<div><a href="%s"><img src="%s" alt="%s"/> %s</a>'
-                   % (html_escape(attachment.download_url()),
+                   % (xml_escape(attachment.download_url()),
                       req.external_resource('DOWNLOAD_ICON'),
-                      _('download icon'), html_escape(attachment.dc_title())))
+                      _('download icon'), xml_escape(attachment.dc_title())))
             self.w(u'</div>')
         self.w(u'</div>\n</div>\n</div>\n')
 
