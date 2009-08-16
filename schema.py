@@ -47,9 +47,8 @@ class interested_in(RelationDefinition):
 
 
 class Application(WorkflowableEntityType):
-    for_person = SubjectRelation('Person', cardinality='1*')
+    for_person = SubjectRelation('Person', cardinality='1*', composite='subject')
     date = Datetime(default='TODAY', required=True)
     tags = ObjectRelation('Tag')
-
 
 
