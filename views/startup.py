@@ -1,4 +1,4 @@
-from logilab.mtconverter import html_escape
+from logilab.mtconverter import xml_escape
 
 from cubicweb.web.views import startup
 
@@ -16,15 +16,24 @@ class IndexView(startup.ManageView):
         rset = self.req.execute(rql)
         if rset:
             self.w(u'<p><a href="%s">%s %s</a></p>'
-                   % (html_escape(self.build_url(rql=rql, vtitle=title)),
+                   % (xml_escape(self.build_url(rql=rql, vtitle=title)),
+                      len(rset), title))
+        # email threads not linked to an application
+        rql = 'Any T WHERE T is EmailThread, NOT T topic X'
+        title = u'message threads without topic'
+        rset = self.req.execute(rql)
+        if rset:
+            self.w(u'<p><a href="%s">%s %s</a></p>'
+                   % (xml_escape(self.build_url(rql=rql, vtitle=title)),
                       len(rset), title))
         # candidatures en attente
-        rset = self.req.execute('Any CD,P,group_concat(TN),E,B '
-                                'GROUPBY P,E,B,CD ORDERBY CD '
-                                'WHERE P in_state X, P is Person, '
-                                'X name "application", '
-                                'T? tags P, T name TN, P has_studied_in E?, '
-                                'P birthday B?, P creation_date CD')
+        rset = self.req.execute('Any A,P,group_concat(TN),E,B '
+                                'GROUPBY A,P,E,B,CD ORDERBY CD '
+                                'WHERE A is Application, A in_state X, '
+                                'X name "received", '
+                                'A for_person P, P has_studied_in E?, '
+                                'P birthday B?, T? tags A, T name TN, '
+                                'A creation_date CD')
         if rset:
             self.w(u'<h2>%s</h2>' % _('Juger candidatures'))
             self.wview('table',rset,'null')

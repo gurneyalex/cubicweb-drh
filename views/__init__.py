@@ -8,4 +8,5 @@ uicfg.actionbox_appearsin_addmenu.tag_subject_of(('School', 'filed_under', 'Fold
 uicfg.autoform_is_inlined.tag_subject_of(('School', 'use_email', '*'), True)
 uicfg.autoform_is_inlined.tag_subject_of(('School', 'phone', '*'), True)
 uicfg.primaryview_section.tag_subject_of(('Person', 'concerned_by', '*'), 'hidden')
+uicfg.primaryview_section.tag_object_of(('*', 'topic', 'Application'), 'hidden')
 uicfg.autoform_section.tag_subject_of(('Application', 'for_person', '*'), 'primary')
