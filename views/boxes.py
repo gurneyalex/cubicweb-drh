@@ -11,14 +11,14 @@ from cubicweb.web.htmlwidgets import SideBoxWidget, BoxLink
 
 class StartupViewsBox(BoxTemplate):
     """display a box containing links to all startup views"""
-    id = 'drh_workflow_box'
+    __regid__ = 'drh_workflow_box'
     visible = True # disabled by default
     title = _('State')
     order = 70
 
     def call(self, **kwargs):
-        box = BoxWidget(self.req._(self.title), self.id)
-        rset = self.req.execute('Any S,SN,count(A) GROUPBY S,SN ORDERBY SN '
+        box = BoxWidget(self._cw._(self.title), self.__regid__)
+        rset = self._cw.execute('Any S,SN,count(A) GROUPBY S,SN ORDERBY SN '
                                 'WHERE A is Application, A in_state S, S name SN')
         for eid, state, count in rset:
             rql_syn = ('Any A,P,group_concat(TN),E,B '
@@ -27,8 +27,8 @@ class StartupViewsBox(BoxTemplate):
                        'A for_person P, P is Person, '
                        'T? tags A, T name TN, P has_studied_in E?, '
                        'P birthday B?, A creation_date CD')
-            url = self.build_url(rql=rql_syn % eid,
-                                 vtitle=self.req._(state))
+            url = self._cw.build_url(rql=rql_syn % eid,
+                                 vtitle=self._cw._(state))
             label = u'%s: %s' % (state, count)
             box.append(BoxLink(url, label))
 
@@ -40,15 +40,15 @@ class AttachmentsDownloadBox(EntityBoxTemplate):
     """
     A box containing all downloadable attachments concerned by Person.
     """
-    id = 'concerned_by_box'
+    __regid__ = 'concerned_by_box'
     __select__ = EntityBoxTemplate.__select__ & implements('Person')
     rtype = 'concerned_by'
     target = 'subject'
     order = 0
 
     def cell_call(self, row, col, **kwargs):
-        entity = self.entity(row, col)
-        req = self.req
+        entity = self.cw_rset.get_entity(row, col)
+        req = self._cw
         self.w(u'<div class="sideBox">')
         title = req._('concerned_by')
         self.w(u'<div class="sideBoxTitle downloadBoxTitle"><span>%s</span></div>'
@@ -64,15 +64,15 @@ class AttachmentsDownloadBox(EntityBoxTemplate):
 
 
 class PeopleBox(EntityBoxTemplate):
-    id = '123people_box'
+    __regid__ = '123people_box'
     __select__ = EntityBoxTemplate.__select__ & implements('Person')
     order = 25
 
     def cell_call(self, row, col, **kwargs):
-        entity = self.entity(row, col)
+        entity = self.cw_rset.get_entity(row, col)
         firstname = entity.firstname
         surname = entity.surname
-        box = SideBoxWidget(self.req._('The url\'s Person on 123people '),
+        box = SideBoxWidget(self._cw._('The url\'s Person on 123people '),
                             'person_on_123people')
         box.append(BoxLink('http://www.123people.com/s/%s+%s/world' % (firstname, surname),
                            xml_escape('%s %s' % (firstname, surname))))

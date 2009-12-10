@@ -3,7 +3,7 @@ from cubicweb.web.component import RelatedObjectsVComponent
 
 class SentMailVComponent(RelatedObjectsVComponent):
     """email sent by this person"""
-    id = 'sentmail'
+    __regid__ = 'sentmail'
     __select__ = RelatedObjectsVComponent.__select__ & implements('Person') & rql_condition('X use_email EA, E sender EA')
     rtype = 'use_email'
     role = 'subject'
@@ -17,7 +17,7 @@ class SentMailVComponent(RelatedObjectsVComponent):
 
 class ThreadTopicVComponent(RelatedObjectsVComponent):
     """email in threads related to this topic"""
-    id = 'threadtopic'
+    __regid__ = 'threadtopic'
     __select__ = RelatedObjectsVComponent.__select__ & implements('Application') & rql_condition('E in_thread T, T topic X')
     rtype = 'topic'
     role = 'object'
