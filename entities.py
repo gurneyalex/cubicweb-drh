@@ -1,5 +1,5 @@
 from cubicweb.interfaces import ITree
-from cubicweb.common.mixins import TreeMixIn
+from cubicweb.mixins import TreeMixIn
 
 from cubicweb.entities import AnyEntity, fetch_config
 
