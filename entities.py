@@ -1,12 +1,12 @@
 from cubicweb.interfaces import ITree
-from cubicweb.common.mixins import TreeMixIn
+from cubicweb.mixins import TreeMixIn
 
 from cubicweb.entities import AnyEntity, fetch_config
 
 from cubes.email.entities import EmailThread as EmailEmailThread
 
 class School(AnyEntity):
-    id = 'School'
+    __regid__ = 'School'
     fetch_attrs, fetch_order = fetch_config(['name'])
 
 
@@ -15,6 +15,8 @@ class EmailThread(TreeMixIn, EmailEmailThread):
     __implements__ = EmailEmailThread.__implements__ + (ITree,)
 
     tree_attribute = 'topic'
+    parent_target = 'object'
+    children_target = 'subject'
 
     def parent(self):
         """for breadcrumbs"""
@@ -23,9 +25,12 @@ class EmailThread(TreeMixIn, EmailEmailThread):
 
 class Application(TreeMixIn, AnyEntity):
 
+    __regid__ = 'Application'
     __implements__ = AnyEntity.__implements__ + (ITree,)
 
     tree_attribute = 'for_person'
+    parent_target = 'object'
+    children_target = 'subject'
 
     def parent(self):
         """for breadcrumbs"""
