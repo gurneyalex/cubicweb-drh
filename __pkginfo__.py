@@ -14,11 +14,10 @@ http://www.logilab.fr/ -- mailto:contact@logilab.fr'''
 author = "Logilab"
 author_email = "contact@logilab.fr"
 
-short_desc = "drh component for the CubicWeb framework"
-long_desc = """This CubicWeb component provides an human resources management application
-usable to manage a recruitment process.
-
-CubicWeb is a semantic web application framework, see http://www.cubicweb.org
+short_desc = "recruitment application based on the CubicWeb framework"
+long_desc = """\
+This cube provides an human resources management application usable to manage a
+recruitment process.
 """
 
 ftp = ''
