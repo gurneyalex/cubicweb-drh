@@ -32,7 +32,7 @@ class IndexView(startup.ManageView):
                                 'WHERE A is Application, A in_state X, '
                                 'X name "received", '
                                 'A for_person P, P has_studied_in E?, '
-                                'P birthday B?, T? tags A, T name TN, '
+                                'P birthday B, T? tags A, T name TN, '
                                 'A creation_date CD')
         if rset:
             self.w(u'<h2>%s</h2>' % _('Juger candidatures'))
