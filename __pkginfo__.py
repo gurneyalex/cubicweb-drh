@@ -4,7 +4,7 @@
 modname = 'drh'
 distname = "cubicweb-drh"
 
-numversion = (0, 17, 0)
+numversion = (0, 18, 0)
 version = '.'.join(str(num) for num in numversion)
 
 license = 'LGPL'
@@ -46,7 +46,7 @@ __depends_cubes__ = {'file': None,
                      'event': None,
                      'task': None,
                      }
-__depends__ = {'cubicweb': '>= 3.6.0'}
+__depends__ = {'cubicweb': '>= 3.8.0'}
 for key, value in __depends_cubes__.items():
     __depends__['cubicweb-'+key] = value
 __use__ = tuple(__depends_cubes__)

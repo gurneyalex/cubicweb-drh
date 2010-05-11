@@ -10,9 +10,7 @@ Homepage: http://www.cubicweb.org/project/cubicweb-drh
 
 Package: cubicweb-drh
 Architecture: all
-Conflicts: cubicweb-drh-appl-server, cubicweb-drh-appl, cubicweb-drh-appl-client, cubicweb-drh-appl
-Replaces: cubicweb-drh-appl-server, cubicweb-drh-appl, cubicweb-drh-appl-client, cubicweb-drh-appl
-Depends: cubicweb-common (>= 3.6.0),
+Depends: cubicweb-common (>= 3.8.0),
   cubicweb-file, cubicweb-email, cubicweb-person, cubicweb-addressbook, cubicweb-tag,
   cubicweb-folder, cubicweb-comment, cubicweb-basket, cubicweb-task, cubicweb-event
 Description: drh component for the CubicWeb framework
