@@ -1,45 +1,47 @@
-from yams.buildobjs import (EntityType, RelationType, RelationDefinition,
-                            SubjectRelation, ObjectRelation,
+from yams.buildobjs import (EntityType, RelationDefinition, SubjectRelation,
                             String, Date, Datetime)
 from cubicweb.schema import WorkflowableEntityType
-
-try:
-    from cubes.person.schema import Person
-    from cubes.task.schema import Task
-    from cubes.event.schema import Event
-except (ImportError, NameError):
-    # old-style yams schema will raise NameError on EntityType, RelationType, etc.
-    Person = import_erschema('Person')
-    Task = import_erschema('Task')
-    Event = import_erschema('Event')
-
-Person.add_relation(Date(), name='birthday')
-Person.add_relation(ObjectRelation('Comment', cardinality='1*', composite='object'), name='comments')
-Person.add_relation(ObjectRelation('Tag'), name='tags')
-Person.add_relation(SubjectRelation('File'), name='concerned_by')
-
-
-Task.add_relation(ObjectRelation('Comment', cardinality='1*', composite='object'), name='comments')
-Task.add_relation(SubjectRelation('Person'), name='todo_by')
-
-Event.add_relation(ObjectRelation('Comment', cardinality='1*', composite='object'), name='comments')
 
 
 class School(EntityType):
     """an (high) school"""
-    name   = String(required=True, fulltextindexed=True, maxsize=128)
-    address   = String(maxsize=512)
+    name        = String(required=True, fulltextindexed=True, maxsize=128)
+    address     = String(maxsize=512)
     description = String(fulltextindexed=True)
 
-    phone         = SubjectRelation('PhoneNumber', composite='subject')
-    use_email     = SubjectRelation('EmailAddress', composite='subject')
-
-    has_studied_in = ObjectRelation('Person')
+    phone     = SubjectRelation('PhoneNumber', composite='subject')
+    use_email = SubjectRelation('EmailAddress', composite='subject')
 
 
-class has_studied_in(RelationType):
+class Application(WorkflowableEntityType):
+    date = Datetime(default='TODAY', required=True)
+    for_person = SubjectRelation('Person', cardinality='1*', composite='object')
+
+
+class comments(RelationDefinition):
+    subject = 'Comment'
+    object = 'Person', 'Task', 'Event'
+    cardinality = '1*'
+    composite = 'object'
+
+class tags(RelationDefinition):
+    subject = 'Tag'
+    object = ('Person', 'Application')
+
+
+class birthday(RelationDefinition):
+    subject = 'Person'
+    object = 'Date'
+
+class concerned_by(RelationDefinition):
+    subject = 'Person'
+    object = 'File'
+
+class has_studied_in(RelationDefinition):
     """used to indicate an estabishment where a person has been studying"""
     # XXX promotion?
+    subject = 'Person'
+    object = 'School'
 
 
 class interested_in(RelationDefinition):
@@ -47,10 +49,12 @@ class interested_in(RelationDefinition):
     object = 'Event'
 
 
-class Application(WorkflowableEntityType):
-    for_person = SubjectRelation('Person', cardinality='1*', composite='object')
-    date = Datetime(default='TODAY', required=True)
-    tags = ObjectRelation('Tag')
-    topic = ObjectRelation('EmailThread')
+class todo_by(RelationDefinition):
+    subject = 'Task'
+    object = 'Person'
 
+
+class topic(RelationDefinition):
+    subject = 'EmailThread'
+    object = 'Application'
 
