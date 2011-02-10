@@ -1,38 +1,59 @@
-from cubicweb.interfaces import ITree
-from cubicweb.mixins import TreeMixIn
-
+from cubicweb.selectors import is_instance
 from cubicweb.entities import AnyEntity, fetch_config
-
-from cubes.email.entities import EmailThread as EmailEmailThread
+from cubicweb.entities.adapters import ITreeAdapter
 
 class School(AnyEntity):
     __regid__ = 'School'
     fetch_attrs, fetch_order = fetch_config(['name'])
 
 
-class EmailThread(TreeMixIn, EmailEmailThread):
+class EmailThreadITreeAdapter(ITreeAdapter):
+    __select__ = is_instance('EmailThread')
+    tree_relation = 'topic'
+    parent_role = 'object'
+    child_role = 'subject'
 
-    __implements__ = EmailEmailThread.__implements__ + (ITree,)
+    def different_type_children(self, entities=True):
+        if entities: return []
+        return self._cw.empty_rset()
 
-    tree_attribute = 'topic'
-    parent_target = 'object'
-    children_target = 'subject'
+    def same_type_children(self, entities=True):
+        if entities: return []
+        return self._cw.empty_rset()
 
-    def parent(self):
-        """for breadcrumbs"""
-        return self.topic and self.topic[0] or None
+    def children(self, entities=True, sametype=False):
+        if sametype:
+            return self.same_type_children(entities)
+        else:
+            return self._cw.empty_rset()
 
+class ApplicationITreeAdapter(ITreeAdapter):
+    __select__ = is_instance('Application')
+    tree_relation = 'for_person'
+    parent_role = 'object'
+    child_role = 'subject'
 
-class Application(TreeMixIn, AnyEntity):
+    def children_rql(self):
+        """Returns RQL to get the children of the entity."""
+        return self.entity.cw_related_rql('topic', 'object')
 
-    __regid__ = 'Application'
-    __implements__ = AnyEntity.__implements__ + (ITree,)
+    def different_type_children(self, entities=True):
+        res = self.entity.related('topic', 'object', entities=entities)
+        eschema = self.entity.e_schema
+        if entities:
+            return [e for e in res if e.e_schema != eschema]
+        return res.filtered_rset(lambda x: x.e_schema != eschema, self.entity.cw_col)
 
-    tree_attribute = 'for_person'
-    parent_target = 'object'
-    children_target = 'subject'
+    def same_type_children(self, entities=True):
+        res = self.entity.related('topic', 'object', entities=entities)
+        eschema = self.entity.e_schema
+        if entities:
+            return [e for e in res if e.e_schema == eschema]
+        return res.filtered_rset(lambda x: x.e_schema is eschema, self.entity.cw_col)
 
-    def parent(self):
-        """for breadcrumbs"""
-        return self.for_person and self.for_person[0] or None
+    def children(self, entities=True, sametype=False):
+        if sametype:
+            return self.same_type_children(entities)
+        else:
+            return self.entity.related('topic', 'object', entities=entities)
 
