@@ -7,6 +7,7 @@ msgstr ""
 "PO-Revision-Date: 2008-02-15 11:18+0100\n"
 "Last-Translator: Logilab Team <contact@logilab.fr>\n"
 "Language-Team: fr <contact@logilab.fr>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,10 +20,6 @@ msgstr "Candidature"
 
 msgid "Application_plural"
 msgstr "Candidatures"
-
-msgctxt "inlined:School.use_email.subject"
-msgid "EmailAddress"
-msgstr "adresse email"
 
 msgid "Index"
 msgstr "Référence"
@@ -78,10 +75,6 @@ msgstr "adresse email"
 msgid "add Task todo_by Person object"
 msgstr "ajouter une tâche à faire"
 
-msgctxt "inlined:School.use_email.subject"
-msgid "add a EmailAddress"
-msgstr "adresse email"
-
 # subject and object forms for each relation type
 # (no object form for final or symmetric relation types)
 msgctxt "School"
@@ -107,39 +100,21 @@ msgctxt "Person"
 msgid "birthday"
 msgstr "anniversaire"
 
-msgid "boxes_123people_box"
-msgstr "boîte 123people"
-
-msgid "boxes_123people_box_description"
-msgstr "afficher le lien de la personne sur le site 123people"
-
-msgid "boxes_concerned_by_box"
-msgstr "boîte concerné par"
-
-msgid "boxes_concerned_by_box_description"
-msgstr "afficher les fichiers liés à une personne"
-
-msgid "boxes_drh_workflow_box"
-msgstr "boîte personnes / état "
-
-msgid "boxes_drh_workflow_box_description"
-msgstr "affiche des liens pour voir les personnes en fonction de leur état"
-
 msgid "cancel application"
 msgstr "annuler une candidature"
 
 msgid "canceled"
 msgstr "annulé"
 
+msgctxt "Event"
+msgid "comments_object"
+msgstr "commenté par"
+
 msgctxt "Person"
 msgid "comments_object"
 msgstr "commenté par"
 
 msgctxt "Task"
-msgid "comments_object"
-msgstr "commenté par"
-
-msgctxt "Event"
 msgid "comments_object"
 msgstr "commenté par"
 
@@ -155,27 +130,12 @@ msgctxt "Person"
 msgid "concerned_by"
 msgstr "concerné par"
 
+msgid "concerned_by_object"
+msgstr "concerne"
+
 msgctxt "File"
 msgid "concerned_by_object"
 msgstr "concerne"
-
-msgid "concerned_by_object"
-msgstr "concerne"
-
-msgid "contentnavigation_mailtopic"
-msgstr ""
-
-msgid "contentnavigation_sentmail"
-msgstr "mail"
-
-msgid "contentnavigation_sentmail_description"
-msgstr "emails envoyés"
-
-msgid "contentnavigation_threadtopic"
-msgstr ""
-
-msgid "contentnavigation_threadtopic_description"
-msgstr ""
 
 msgid "creating Application (Application for_person Person %(linkto)s)"
 msgstr "création d'une candidature pour %(linkto)s"
@@ -191,6 +151,39 @@ msgstr "création d'un numéro de téléphone pour l'école %(linkto)s"
 
 msgid "creating Task (Task todo_by Person %(linkto)s)"
 msgstr "création d'une tâche à faire par %(linkto)s"
+
+msgid "ctxcomponents_drh.123people_box"
+msgstr "boîte 123people"
+
+msgid "ctxcomponents_drh.123people_box_description"
+msgstr "afficher le lien de la personne sur le site 123people"
+
+msgid "ctxcomponents_drh.concerned_by_box"
+msgstr "boîte concerné par"
+
+msgid "ctxcomponents_drh.concerned_by_box_description"
+msgstr "afficher les fichiers liés à une personne"
+
+msgid "ctxcomponents_drh.workflow_box"
+msgstr "boîte personnes / état "
+
+msgid "ctxcomponents_drh.workflow_box_description"
+msgstr "affiche des liens pour voir les personnes en fonction de leur état"
+
+msgid "ctxcomponents_mailtopic"
+msgstr ""
+
+msgid "ctxcomponents_sentmail"
+msgstr "emails envoyés"
+
+msgid "ctxcomponents_sentmail_description"
+msgstr ""
+
+msgid "ctxcomponents_threadtopic"
+msgstr ""
+
+msgid "ctxcomponents_threadtopic_description"
+msgstr ""
 
 msgctxt "Application"
 msgid "date"
@@ -216,10 +209,10 @@ msgctxt "Application"
 msgid "for_person"
 msgstr "de la personne"
 
-msgctxt "Person"
 msgid "for_person_object"
 msgstr "candidature de"
 
+msgctxt "Person"
 msgid "for_person_object"
 msgstr "candidature de"
 
@@ -230,25 +223,13 @@ msgctxt "Person"
 msgid "has_studied_in"
 msgstr "a étudié à"
 
+msgid "has_studied_in_object"
+msgstr "école de"
+
 msgctxt "School"
 msgid "has_studied_in_object"
 msgstr "école de"
 
-msgid "has_studied_in_object"
-msgstr "école de"
-
-msgctxt "Application"
-msgid "in_basket"
-msgstr "dans le panier"
-
-msgctxt "School"
-msgid "in_basket"
-msgstr "dans le panier"
-
-msgid "interested_in"
-msgstr "intéressé par"
-
-msgctxt "Person"
 msgid "interested_in"
 msgstr "intéressé par"
 
@@ -256,10 +237,14 @@ msgctxt "CWUser"
 msgid "interested_in"
 msgstr "intéressé par"
 
-msgctxt "Event"
+msgctxt "Person"
+msgid "interested_in"
+msgstr "intéressé par"
+
 msgid "interested_in_object"
 msgstr "intéresse"
 
+msgctxt "Event"
 msgid "interested_in_object"
 msgstr "intéresse"
 
@@ -337,11 +322,11 @@ msgstr "envoyer une réponse négative"
 msgid "send positive answer"
 msgstr "envoyer une réponse positive"
 
-msgctxt "Person"
+msgctxt "Application"
 msgid "tags_object"
 msgstr "étiquetté par"
 
-msgctxt "Application"
+msgctxt "Person"
 msgid "tags_object"
 msgstr "étiquetté par"
 
@@ -356,10 +341,10 @@ msgctxt "EmailThread"
 msgid "topic"
 msgstr "sujet"
 
-msgctxt "Application"
 msgid "topic_object"
 msgstr "emails"
 
+msgctxt "Application"
 msgid "topic_object"
 msgstr "emails"
 
@@ -367,5 +352,5 @@ msgctxt "School"
 msgid "use_email"
 msgstr "email"
 
-msgid "used to indicate an estabishment where a person has been studying"
-msgstr "utilisé pour indiquer l'école où la personne a étudié"
+#~ msgid "contentnavigation_sentmail"
+#~ msgstr "mail"

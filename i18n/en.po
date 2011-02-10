@@ -7,6 +7,7 @@ msgstr ""
 "PO-Revision-Date: 2008-02-15 11:23+0100\n"
 "Last-Translator: Logilab Team <contact@logilab.fr>\n"
 "Language-Team: en <contact@logilab.fr>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -20,10 +21,6 @@ msgstr "Application"
 msgid "Application_plural"
 msgstr "Applications"
 
-msgctxt "inlined:School.use_email.subject"
-msgid "EmailAddress"
-msgstr ""
-
 msgid "Index"
 msgstr "Index"
 
@@ -31,7 +28,7 @@ msgid "Juger candidatures"
 msgstr "application"
 
 msgid "New Application"
-msgstr "New Application"
+msgstr "New application"
 
 msgid "New School"
 msgstr "New school"
@@ -52,7 +49,7 @@ msgid "The url's Person on 123people "
 msgstr "Link to the peson's page on 123people site"
 
 msgid "This Application"
-msgstr "This Application"
+msgstr "This application"
 
 msgid "This School"
 msgstr "This school"
@@ -64,7 +61,7 @@ msgid "accept interview"
 msgstr ""
 
 msgid "add Application for_person Person object"
-msgstr ""
+msgstr "applicaiton"
 
 msgid "add Person concerned_by File subject"
 msgstr "file"
@@ -78,15 +75,11 @@ msgstr "email address"
 msgid "add Task todo_by Person object"
 msgstr "task"
 
-msgctxt "inlined:School.use_email.subject"
-msgid "add a EmailAddress"
-msgstr ""
-
 # subject and object forms for each relation type
 # (no object form for final or symmetric relation types)
 msgctxt "School"
 msgid "address"
-msgstr ""
+msgstr "address"
 
 msgid "an (high) school"
 msgstr "an (high) school"
@@ -107,41 +100,23 @@ msgctxt "Person"
 msgid "birthday"
 msgstr ""
 
-msgid "boxes_123people_box"
-msgstr "123people box"
-
-msgid "boxes_123people_box_description"
-msgstr "box contains the link to the person's page on 123people site"
-
-msgid "boxes_concerned_by_box"
-msgstr "concerned by box"
-
-msgid "boxes_concerned_by_box_description"
-msgstr "box contains the attachement files "
-
-msgid "boxes_drh_workflow_box"
-msgstr "box persons/state"
-
-msgid "boxes_drh_workflow_box_description"
-msgstr "display links to show persons by state"
-
 msgid "cancel application"
 msgstr "cancel application"
 
 msgid "canceled"
 msgstr "canceled"
 
+msgctxt "Event"
+msgid "comments_object"
+msgstr "commented by"
+
 msgctxt "Person"
 msgid "comments_object"
-msgstr ""
+msgstr "commented by"
 
 msgctxt "Task"
 msgid "comments_object"
-msgstr ""
-
-msgctxt "Event"
-msgid "comments_object"
-msgstr ""
+msgstr "commented by"
 
 # updated on 2006-07-25 17:34:47
 #
@@ -153,32 +128,17 @@ msgstr "concerned by"
 
 msgctxt "Person"
 msgid "concerned_by"
-msgstr ""
-
-msgctxt "File"
-msgid "concerned_by_object"
-msgstr ""
+msgstr "concerned by"
 
 msgid "concerned_by_object"
 msgstr "concerns"
 
-msgid "contentnavigation_mailtopic"
-msgstr ""
-
-msgid "contentnavigation_sentmail"
-msgstr "email"
-
-msgid "contentnavigation_sentmail_description"
-msgstr "sent mail"
-
-msgid "contentnavigation_threadtopic"
-msgstr ""
-
-msgid "contentnavigation_threadtopic_description"
-msgstr ""
+msgctxt "File"
+msgid "concerned_by_object"
+msgstr "concerns"
 
 msgid "creating Application (Application for_person Person %(linkto)s)"
-msgstr ""
+msgstr "creating application for %(linkto)s"
 
 msgid "creating EmailAddress (School %(linkto)s use_email EmailAddress)"
 msgstr "creating email address for %(linkto)s"
@@ -191,6 +151,39 @@ msgstr "adding a new phone number for %(linkto)s"
 
 msgid "creating Task (Task todo_by Person %(linkto)s)"
 msgstr "adding a new task to %(linkto)s"
+
+msgid "ctxcomponents_drh.123people_box"
+msgstr "123people box"
+
+msgid "ctxcomponents_drh.123people_box_description"
+msgstr "box contains the link to the person's page on 123people site"
+
+msgid "ctxcomponents_drh.concerned_by_box"
+msgstr "concerned by box"
+
+msgid "ctxcomponents_drh.concerned_by_box_description"
+msgstr "box contains the attachement files "
+
+msgid "ctxcomponents_drh.workflow_box"
+msgstr "box persons/state"
+
+msgid "ctxcomponents_drh.workflow_box_description"
+msgstr "display links to show persons by state"
+
+msgid "ctxcomponents_mailtopic"
+msgstr ""
+
+msgid "ctxcomponents_sentmail"
+msgstr "sent emails"
+
+msgid "ctxcomponents_sentmail_description"
+msgstr ""
+
+msgid "ctxcomponents_threadtopic"
+msgstr ""
+
+msgid "ctxcomponents_threadtopic_description"
+msgstr ""
 
 msgctxt "Application"
 msgid "date"
@@ -214,12 +207,12 @@ msgstr "for person"
 
 msgctxt "Application"
 msgid "for_person"
-msgstr ""
+msgstr "for person"
+
+msgid "for_person_object"
+msgstr "person applied"
 
 msgctxt "Person"
-msgid "for_person_object"
-msgstr ""
-
 msgid "for_person_object"
 msgstr "person applied"
 
@@ -228,38 +221,30 @@ msgstr "has studied in"
 
 msgctxt "Person"
 msgid "has_studied_in"
-msgstr ""
-
-msgctxt "School"
-msgid "has_studied_in_object"
-msgstr ""
+msgstr "has studied in"
 
 msgid "has_studied_in_object"
 msgstr "has students"
 
-msgctxt "Application"
-msgid "in_basket"
-msgstr ""
-
 msgctxt "School"
-msgid "in_basket"
-msgstr ""
+msgid "has_studied_in_object"
+msgstr "has students"
 
+msgid "interested_in"
+msgstr "interested in"
+
+msgctxt "CWUser"
 msgid "interested_in"
 msgstr "interested in"
 
 msgctxt "Person"
 msgid "interested_in"
-msgstr ""
+msgstr "interested in"
 
-msgctxt "CWUser"
-msgid "interested_in"
-msgstr ""
+msgid "interested_in_object"
+msgstr "is an interest of"
 
 msgctxt "Event"
-msgid "interested_in_object"
-msgstr ""
-
 msgid "interested_in_object"
 msgstr "is an interest of"
 
@@ -337,13 +322,13 @@ msgstr "send negative answer"
 msgid "send positive answer"
 msgstr "send positive answer"
 
-msgctxt "Person"
-msgid "tags_object"
-msgstr ""
-
 msgctxt "Application"
 msgid "tags_object"
-msgstr ""
+msgstr "tagged by"
+
+msgctxt "Person"
+msgid "tags_object"
+msgstr "tagged by"
 
 msgctxt "Person"
 msgid "todo_by_object"
@@ -356,31 +341,13 @@ msgctxt "EmailThread"
 msgid "topic"
 msgstr ""
 
+msgid "topic_object"
+msgstr "topic"
+
 msgctxt "Application"
 msgid "topic_object"
-msgstr ""
-
-msgid "topic_object"
-msgstr ""
+msgstr "topic"
 
 msgctxt "School"
 msgid "use_email"
-msgstr ""
-
-msgid "used to indicate an estabishment where a person has been studying"
-msgstr "used to indicate an estabishment where a person has been studying"
-
-#~ msgid "add a Application"
-#~ msgstr "add a Application"
-
-#~ msgid "add a School"
-#~ msgstr "add a school"
-
-#~ msgid "propositiion accepted"
-#~ msgstr "propositiion accepted"
-
-#~ msgid "remove this Application"
-#~ msgstr "remove this Application"
-
-#~ msgid "remove this School"
-#~ msgstr "remove this school"
+msgstr "use email"
