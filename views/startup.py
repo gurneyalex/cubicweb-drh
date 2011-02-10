@@ -2,8 +2,7 @@ from logilab.mtconverter import xml_escape
 
 from cubicweb.web.views import startup
 
-class IndexView(startup.ManageView):
-    __regid__ = 'index'
+class IndexView(startup.IndexView):
     title = _('Index')
 
     def call(self):
@@ -44,4 +43,4 @@ class IndexView(startup.ManageView):
 
 
 def registration_callback(vreg):
-    vreg.register(IndexView, clear=True)
+    vreg.register_and_replace(IndexView, startup.IndexView)
