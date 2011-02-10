@@ -1,31 +1,33 @@
-from cubicweb.selectors import implements, rql_condition
-from cubicweb.web.component import RelatedObjectsVComponent
+from cubicweb.selectors import is_instance, rql_condition
+from cubicweb.web import component
 
-class SentMailVComponent(RelatedObjectsVComponent):
+class SentMailVComponent(component.EntityCtxComponent):
     """email sent by this person"""
     __regid__ = 'sentmail'
-    __select__ = RelatedObjectsVComponent.__select__ & implements('Person') & rql_condition('X use_email EA, E sender EA')
-    rtype = 'use_email'
-    role = 'subject'
+    __select__ = (component.EntityCtxComponent.__select__
+                  & is_instance('Person')
+                  & rql_condition('X use_email EA, E sender EA'))
+    title = _('ctxcomponents_sentmail')
     order = 40
-    # reuse generated message id
-    title = _('contentnavigation_sentmail')
 
-    def rql(self):
-        """override this method if you want to use a custom rql query"""
-        return 'Any E ORDERBY D DESC WHERE P use_email EA, E sender EA, E date D, P eid %(x)s'
+    def render_body(self, w):
+        rset = self._cw.execute('Any E ORDERBY D DESC WHERE P use_email EA, '
+                                'E sender EA, E date D, P eid %(x)s',
+                                {'x': self.entity.eid})
+        self._cw.view('list', rset, w=w)
 
-class ThreadTopicVComponent(RelatedObjectsVComponent):
+class ThreadTopicVComponent(component.EntityCtxComponent):
     """email in threads related to this topic"""
     __regid__ = 'threadtopic'
-    __select__ = RelatedObjectsVComponent.__select__ & implements('Application') & rql_condition('E in_thread T, T topic X')
-    rtype = 'topic'
-    role = 'object'
+    __select__ = (component.EntityCtxComponent.__select__
+                  & is_instance('Application')
+                  & rql_condition('E in_thread T, T topic X'))
+    title = _('ctxcomponents_mailtopic')
     order = 40
-    # reuse generated message id
-    title = _('contentnavigation_mailtopic')
 
-    def rql(self):
-        """override this method if you want to use a custom rql query"""
-        return 'Any E ORDERBY D DESC WHERE E date D, E in_thread T, T topic A, A eid %(x)s'
+    def render_body(self, w):
+        rset = self._cw.execute('Any E ORDERBY D DESC WHERE E date D, '
+                                'E in_thread T, T topic A, A eid %(x)s',
+                                {'x': self.entity.eid})
+        self._cw.view('list', rset, w=w)
 
