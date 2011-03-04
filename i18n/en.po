@@ -61,7 +61,7 @@ msgid "accept interview"
 msgstr ""
 
 msgid "add Application for_person Person object"
-msgstr "applicaiton"
+msgstr "application"
 
 msgid "add Person concerned_by File subject"
 msgstr "file"
