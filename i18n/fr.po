@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: erudi-drh 0.1.0\n"
-"PO-Revision-Date: 2008-02-15 11:18+0100\n"
+"PO-Revision-Date: 2012-03-22 12:37+0100\n"
 "Last-Translator: Logilab Team <contact@logilab.fr>\n"
 "Language-Team: fr <contact@logilab.fr>\n"
 "Language: \n"
@@ -311,7 +311,7 @@ msgid "rejected"
 msgstr "rejetée"
 
 msgid "schedule interview"
-msgstr "guide d'entretien"
+msgstr "planifier entretien"
 
 msgid "send interview proposition"
 msgstr "envoyer une propositon d'un entretien"
