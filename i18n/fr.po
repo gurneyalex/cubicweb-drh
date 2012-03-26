@@ -299,7 +299,7 @@ msgid "recruited accepted"
 msgstr "recrutement accepté"
 
 msgid "recruitment pending"
-msgstr "attentre recrutement"
+msgstr "attente recrutement"
 
 msgid "refused"
 msgstr "refusé"
