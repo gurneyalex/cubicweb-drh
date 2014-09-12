@@ -4,7 +4,7 @@ from cubicweb.entities.adapters import ITreeAdapter
 
 class School(AnyEntity):
     __regid__ = 'School'
-    fetch_attrs, fetch_order = fetch_config(['name'])
+    fetch_attrs, cw_fetch_order = fetch_config(['name'])
 
 
 class EmailThreadITreeAdapter(ITreeAdapter):
