@@ -27,8 +27,6 @@ __depends__ = {'cubicweb': '>= 3.10.0',
                'cubicweb-folder': None,
                'cubicweb-tag': None,
                'cubicweb-comment': None,
-               # could be moved out
-               'cubicweb-basket': None,
                'cubicweb-event': None,
                'cubicweb-task': None,
                }

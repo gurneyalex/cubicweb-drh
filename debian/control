@@ -12,7 +12,7 @@ Package: cubicweb-drh
 Architecture: all
 Depends: cubicweb-common (>= 3.10.0),
   cubicweb-file, cubicweb-email, cubicweb-person, cubicweb-addressbook, cubicweb-tag,
-  cubicweb-folder, cubicweb-comment, cubicweb-basket, cubicweb-task, cubicweb-event
+  cubicweb-folder, cubicweb-comment, cubicweb-task, cubicweb-event
 Description: drh component for the CubicWeb framework
  This CubicWeb component provides an human resources management application
  usable to manage a recruitment process.
