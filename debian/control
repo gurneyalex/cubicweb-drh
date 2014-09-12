@@ -10,7 +10,7 @@ Homepage: http://www.cubicweb.org/project/cubicweb-drh
 
 Package: cubicweb-drh
 Architecture: all
-Depends: cubicweb-common (>= 3.10.0),
+Depends: cubicweb-common (>= 3.16.0),
   cubicweb-file, cubicweb-email, cubicweb-person, cubicweb-addressbook, cubicweb-tag,
   cubicweb-folder, cubicweb-comment, cubicweb-task, cubicweb-event
 Description: drh component for the CubicWeb framework

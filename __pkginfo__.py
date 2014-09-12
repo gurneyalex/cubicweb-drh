@@ -19,7 +19,7 @@ classifiers = [
     'Programming Language :: JavaScript',
     ]
 
-__depends__ = {'cubicweb': '>= 3.10.0',
+__depends__ = {'cubicweb': '>= 3.16.0',
                'cubicweb-file': None,
                'cubicweb-email': None,
                'cubicweb-person': None,

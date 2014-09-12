@@ -1,4 +1,4 @@
-from cubicweb.selectors import is_instance
+from cubicweb.predicates import is_instance
 from cubicweb.entities import AnyEntity, fetch_config
 from cubicweb.entities.adapters import ITreeAdapter
 
