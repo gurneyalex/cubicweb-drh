@@ -1,5 +1,7 @@
-from cubicweb.selectors import is_instance, rql_condition
+from cubicweb.predicates import is_instance, rql_condition
 from cubicweb.web import component
+
+_ = unicode
 
 class SentMailVComponent(component.EntityCtxComponent):
     """email sent by this person"""

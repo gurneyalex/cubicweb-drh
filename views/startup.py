@@ -15,7 +15,7 @@ class IndexView(startup.IndexView):
         rset = self._cw.execute(rql)
         if rset:
             self.w(u'<p><a href="%s">%s %s</a></p>'
-                   % (xml_escape(self.build_url(rql=rql, vtitle=title)),
+                   % (xml_escape(self._cw.build_url(rql=rql, vtitle=title)),
                       len(rset), title))
         # email threads not linked to an application
         rql = 'Any T WHERE T is EmailThread, NOT T topic X'
@@ -23,7 +23,7 @@ class IndexView(startup.IndexView):
         rset = self._cw.execute(rql)
         if rset:
             self.w(u'<p><a href="%s">%s %s</a></p>'
-                   % (xml_escape(self.build_url(rql=rql, vtitle=title)),
+                   % (xml_escape(self._cw.build_url(rql=rql, vtitle=title)),
                       len(rset), title))
         # candidatures en attente
         rset = self._cw.execute('Any A,P,group_concat(TN),E,B '

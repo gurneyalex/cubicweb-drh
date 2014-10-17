@@ -1,7 +1,7 @@
 
 from logilab.mtconverter import xml_escape
 
-from cubicweb.selectors import is_instance, score_entity
+from cubicweb.predicates import is_instance, score_entity
 from cubicweb.web import component
 from cubicweb.web.htmlwidgets import BoxWidget, BoxLink, SideBoxWidget
 
