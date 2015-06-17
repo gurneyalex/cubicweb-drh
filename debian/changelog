@@ -1,3 +1,10 @@
+cubicweb-drh (0.19.0-1) unstable; urgency=medium
+
+  * new upstream release
+  * upgrade ti dh_python2 
+
+ -- David Douard <david.douard@logilab.fr>  Wed, 17 Jun 2015 22:25:50 +0200
+
 cubicweb-drh (0.18.1-1) unstable; urgency=low
 
   * new upstream release
