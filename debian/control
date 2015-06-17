@@ -2,17 +2,35 @@ Source: cubicweb-drh
 Section: web
 Priority: optional
 Maintainer: Logilab Packaging Team <contact@logilab.fr>
-Uploaders: Sylvain Thenault <sylvain.thenault@logilab.fr>,
-  Nicolas Chauvat <nicolas.chauvat@logilab.fr>
-Build-Depends: debhelper (>= 5.0.37.1), python (>=2.4), python-dev (>=2.4)
-Standards-Version: 3.8.0
-Homepage: http://www.cubicweb.org/project/cubicweb-drh
+Uploaders: 
+  Sylvain Thenault <sylvain.thenault@logilab.fr>,
+  Nicolas Chauvat <nicolas.chauvat@logilab.fr>,
+Build-Depends: 
+  debhelper (>= 9), 
+  dh_python2,
+  python-all (>= 2.6.6-3~), 
+Standards-Version: 3.9.6
+XS-Python-Version: >= 2.6
+Homepage: https://www.cubicweb.org/project/cubicweb-drh
 
 Package: cubicweb-drh
 Architecture: all
-Depends: cubicweb-common (>= 3.16.0),
-  cubicweb-file, cubicweb-email, cubicweb-person, cubicweb-addressbook, cubicweb-tag,
-  cubicweb-folder, cubicweb-comment, cubicweb-task, cubicweb-event
+Depends: 
+  cubicweb-common (>= 3.16.0),
+  cubicweb-addressbook, 
+  cubicweb-comment, 
+  cubicweb-email, 
+  cubicweb-event,
+  cubicweb-file,
+  cubicweb-folder, 
+  cubicweb-jsonld,
+  cubicweb-person,
+  cubicweb-rqlcontroller,
+  cubicweb-signedrequest, 
+  cubicweb-tag,
+  cubicweb-task, 
+  ${python:Depends},
+  ${misc:Depends},
 Description: drh component for the CubicWeb framework
  This CubicWeb component provides an human resources management application
  usable to manage a recruitment process.
