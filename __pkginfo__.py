@@ -4,7 +4,7 @@
 modname = 'drh'
 distname = "cubicweb-drh"
 
-numversion = (0, 18, 1)
+numversion = (0, 19, 0)
 version = '.'.join(str(num) for num in numversion)
 
 license = 'LGPL'
@@ -29,6 +29,9 @@ __depends__ = {'cubicweb': '>= 3.16.0',
                'cubicweb-comment': None,
                'cubicweb-event': None,
                'cubicweb-task': None,
+               'cubicweb-signedrequest': None,
+               'cubicweb-rqlcontroller': None,
+               'cubicweb-jsonld': None,
                }
 
 # packaging ###
