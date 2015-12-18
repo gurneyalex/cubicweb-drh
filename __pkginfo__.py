@@ -19,11 +19,12 @@ classifiers = [
     'Programming Language :: JavaScript',
     ]
 
-__depends__ = {'cubicweb': '>= 3.16.0',
+__depends__ = {'cubicweb': '>= 3.21.0',
                'cubicweb-file': None,
                'cubicweb-email': None,
                'cubicweb-person': None,
                'cubicweb-addressbook': None,
+               'cubicweb-geocoding': None,
                'cubicweb-folder': None,
                'cubicweb-tag': None,
                'cubicweb-comment': None,
@@ -32,6 +33,7 @@ __depends__ = {'cubicweb': '>= 3.16.0',
                'cubicweb-signedrequest': None,
                'cubicweb-rqlcontroller': None,
                'cubicweb-jsonld': None,
+               'cubicweb-squareui': None,
                }
 
 # packaging ###
