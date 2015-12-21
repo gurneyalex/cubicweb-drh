@@ -20,20 +20,20 @@ classifiers = [
     ]
 
 __depends__ = {'cubicweb': '>= 3.21.0',
-               'cubicweb-file': None,
-               'cubicweb-email': None,
-               'cubicweb-person': None,
                'cubicweb-addressbook': None,
-               'cubicweb-geocoding': None,
-               'cubicweb-folder': None,
-               'cubicweb-tag': None,
                'cubicweb-comment': None,
+               'cubicweb-email': None,
                'cubicweb-event': None,
-               'cubicweb-task': None,
-               'cubicweb-signedrequest': None,
-               'cubicweb-rqlcontroller': None,
+               'cubicweb-file': None,
+               'cubicweb-folder': None,
+               'cubicweb-geocoding': None,
                'cubicweb-jsonld': None,
+               'cubicweb-person': None,
+               'cubicweb-rqlcontroller': None,
+               'cubicweb-signedrequest': None,
                'cubicweb-squareui': None,
+               'cubicweb-tag': None,
+               'cubicweb-task': None,
                }
 
 # packaging ###
