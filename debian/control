@@ -16,10 +16,10 @@ Homepage: https://www.cubicweb.org/project/cubicweb-drh
 Package: cubicweb-drh
 Architecture: all
 Depends: 
-  cubicweb-common (>= 3.16.0),
+  cubicweb-common (>= 3.21),
   cubicweb-addressbook, 
   cubicweb-comment, 
-  cubicweb-email, 
+  cubicweb-email (>= 1.12), 
   cubicweb-event,
   cubicweb-file,
   cubicweb-folder, 

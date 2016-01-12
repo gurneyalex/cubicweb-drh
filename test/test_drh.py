@@ -5,7 +5,11 @@ http://www.logilab.fr/ -- mailto:contact@logilab.fr
 """
 
 from cubicweb.devtools.testlib import AutomaticWebTest
+from cubes.email.testutils import EmailValueGenerator
+
+
 class AutomaticWebTest(AutomaticWebTest): pass
+
 
 if __name__ == '__main__':
     from logilab.common.testlib import unittest_main

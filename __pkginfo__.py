@@ -22,7 +22,7 @@ classifiers = [
 __depends__ = {'cubicweb': '>= 3.21.0',
                'cubicweb-addressbook': None,
                'cubicweb-comment': None,
-               'cubicweb-email': None,
+               'cubicweb-email': '>= 1.12.0',
                'cubicweb-event': None,
                'cubicweb-file': None,
                'cubicweb-folder': None,
