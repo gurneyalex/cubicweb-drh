@@ -20,6 +20,11 @@ from logilab.mtconverter import xml_escape
 
 from cubicweb.web.views import startup
 
+try:
+    from cubicweb import _
+except ImportError:
+    _ = unicode
+
 class IndexView(startup.IndexView):
     title = _('Index')
 

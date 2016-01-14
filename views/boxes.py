@@ -22,6 +22,11 @@ from cubicweb.predicates import is_instance, score_entity
 from cubicweb.web import component
 from cubicweb.web.htmlwidgets import BoxWidget, BoxLink, SideBoxWidget
 
+try:
+    from cubicweb import _
+except ImportError:
+    _ = unicode
+
 class StartupViewsBox(component.CtxComponent):
     """display a box containing links to all startup views"""
     __regid__ = 'drh.workflow_box'
