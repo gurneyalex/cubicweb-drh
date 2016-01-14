@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-
-# copyright 2011-2015 LOGILAB S.A. (Paris, FRANCE), all rights reserved.
+#
+# copyright 2011-2016 LOGILAB S.A. (Paris, FRANCE), all rights reserved.
 # contact http://www.logilab.fr -- mailto:contact@logilab.fr
 #
 # This program is free software: you can redistribute it and/or modify it under
