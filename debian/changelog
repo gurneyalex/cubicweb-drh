@@ -1,3 +1,10 @@
+cubicweb-drh (0.20.0-1) unstable; urgency=medium
+
+  * new upstream release 
+  * build depends on python-setuptools
+
+ -- David Douard <david.douard@logilab.fr>  Thu, 14 Jan 2016 09:57:01 +0100
+
 cubicweb-drh (0.19.0-1) unstable; urgency=medium
 
   * new upstream release
